@@ -1,9 +1,12 @@
 class ProjectsController < ApplicationController
 
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :project_owner, only: [:edit, :update, :destroy]
+  
   def readyfor
   end
   
-  def in
+  def index
     @projects = Project.order(created_at: :desc)
     #検索
   

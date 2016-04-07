@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  
-  
+
   root 'zadankai#home'
   get 'zadankai/about'
   get 'users/index'
@@ -14,6 +13,10 @@ Rails.application.routes.draw do
   }
 
   resources :users
+
+  get 'projects/readyfor'
+  get 'projects/new'
+  resources :projects
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
