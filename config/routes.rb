@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  
-  
+
   root 'zadankai#home'
   get 'zadankai/about'
+  get 'users/index'
+  get 'users/show'
 
   devise_for :users, :controllers => {
     :sessions      => "users/sessions",
@@ -10,6 +11,12 @@ Rails.application.routes.draw do
     :passwords     => "users/passwords",
     :omniauth_callbacks => "users/omniauth_callbacks"
   }
+
+  resources :users
+
+  get 'projects/readyfor'
+  get 'projects/new'
+  resources :projects
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

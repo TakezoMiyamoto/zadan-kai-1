@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
+  has_many :projects
+
    def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first
 

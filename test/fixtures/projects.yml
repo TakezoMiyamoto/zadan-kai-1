@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  project_name: MyText
+  category: MyText
+  brand_name: MyText
+  main_image: MyText
+  youtube_url: MyText
+  description: MyText
+  period_date: 2016-04-07 14:54:04
+
+two:
+  user_id: 
+  project_name: MyText
+  category: MyText
+  brand_name: MyText
+  main_image: MyText
+  youtube_url: MyText
+  description: MyText
+  period_date: 2016-04-07 14:54:04
