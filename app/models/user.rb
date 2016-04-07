@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   has_many :projects
 
+  mount_uploader :avatar, AvatarUploader
+
    def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first
 
