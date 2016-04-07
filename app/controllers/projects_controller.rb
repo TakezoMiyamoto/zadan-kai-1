@@ -30,11 +30,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @project_title = @project.project_name
     # 参加しているユーザー
-    @users = @project.joiner_users.group('joiner_user_id')
-    # 参加しているユーザーがいる場合はそのUserを取得
-    if @users.any?
-    @joinerUser = @project.joiner_users.find(@users)
-    end
+   
     
     @d1 = Time.zone.now
     if @project.period_date.present?
